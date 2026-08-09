@@ -2,8 +2,24 @@ import type { Metadata } from "next";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "حول",
-  description: "تعرف على نادي جميرا للاسكواش - مهمتنا ورؤيتنا ومرافقنا العالمية المستوى.",
+  title: "عن النادي",
+  description:
+    "تعرف على نادي جميرا للاسكواش - مهمتنا ورؤيتنا ومرافقنا العالمية المستوى بستة ملاعب زجاجية في دبي.",
+  alternates: {
+    canonical: "/about",
+  },
+  keywords: [
+    "ملاعب اسكواش جميرا",
+    "رؤية نادي جميرا للاسكواش",
+    "مرافق اسكواش دبي",
+    "ملاعب ASB زجاجية دبي",
+  ],
+  openGraph: {
+    title: "عن النادي | نادي جميرا للاسكواش",
+    description:
+      "تعرف على نادي جميرا للاسكواش - مهمتنا ورؤيتنا ومرافقنا العالمية المستوى بستة ملاعب زجاجية في دبي.",
+    url: "https://jumeira-squash.com/about",
+  },
 };
 
 export default function AboutPage() {

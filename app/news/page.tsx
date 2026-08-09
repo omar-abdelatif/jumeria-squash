@@ -5,8 +5,24 @@ import { newsArticles } from "@/lib/newsData";
 import NewsListWithLoadMore from "@/components/NewsListWithLoadMore";
 
 export const metadata: Metadata = {
-  title: "الأخبار",
-  description: "ابق على اطلاع بنتائج البطولات، وإعلانات النادي، ورؤى الأداء من مجتمع نادي جميرا للاسكواش.",
+  title: "الأخبار والتحديثات",
+  description:
+    "ابق على اطلاع بنتائج البطولات، وإعلانات النادي، ورؤى الأداء ومراجعات المعدات من مجتمع نادي جميرا للاسكواش.",
+  alternates: {
+    canonical: "/news",
+  },
+  keywords: [
+    "أخبار نادي جميرا للاسكواش",
+    "نتائج بطولات اسكواش دبي",
+    "مراجعة مضارب اسكواش",
+    "تغذية وتدريب اسكواش",
+  ],
+  openGraph: {
+    title: "الأخبار والتحديثات | نادي جميرا للاسكواش",
+    description:
+      "ابق على اطلاع بنتائج البطولات، وإعلانات النادي، ورؤى الأداء ومراجعات المعدات من مجتمع نادي جميرا للاسكواش.",
+    url: "https://jumeira-squash.com/news",
+  },
 };
 
 export default function NewsPage() {

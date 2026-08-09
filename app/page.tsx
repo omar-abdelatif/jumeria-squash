@@ -1,5 +1,20 @@
-import Image from "next/image";
+import type { Metadata } from "next";
 import AnimatedSection from "@/components/AnimatedSection";
+
+export const metadata: Metadata = {
+  title: "الرئيسية | نادي جميرا للاسكواش دبي",
+  description:
+    "جرب قمة التدريب على الاسكواش في منشأة مصممة للأبطال. انضم إلى مجتمع حصري مكرس لإتقان اللعبة في دبي.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "الرئيسية | نادي جميرا للاسكواش دبي",
+    description:
+      "جرب قمة التدريب على الاسكواش في منشأة مصممة للأبطال. انضم إلى مجتمع حصري مكرس لإتقان اللعبة.",
+    url: "https://jumeira-squash.com",
+  },
+};
 
 export default function HomePage() {
   return (

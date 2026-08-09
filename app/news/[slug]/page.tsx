@@ -7,6 +7,8 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jumeira-squash.com";
+
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const article = getNewsBySlug(slug);
@@ -15,9 +17,35 @@ export async function generateMetadata({ params }: PageProps) {
       title: "المقال غير موجود | نادي جميرا للاسكواش",
     };
   }
+
+  const articleUrl = `${siteUrl}/news/${article.slug}`;
+
   return {
-    title: `${article.title} | نادي جميرا للاسكواش`,
+    title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `/news/${article.slug}`,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url: articleUrl,
+      type: "article",
+      siteName: "نادي جميرا للاسكواش",
+      locale: "ar_AE",
+      images: [
+        {
+          url: article.image,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [article.image],
+    },
   };
 }
 
@@ -40,8 +68,30 @@ export default async function NewsDetailPage({ params }: PageProps) {
     .filter((a) => a.slug !== article.slug)
     .slice(0, 2);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.title,
+    description: article.excerpt,
+    image: [article.image],
+    author: {
+      "@type": "Person",
+      name: article.author.name,
+      jobTitle: article.author.role,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "نادي جميرا للاسكواش",
+      url: siteUrl,
+    },
+  };
+
   return (
     <article className="max-w-4xl mx-auto py-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Back Button */}
       <AnimatedSection>
         <div className="mb-8">

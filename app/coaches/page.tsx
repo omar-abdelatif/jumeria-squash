@@ -2,8 +2,25 @@ import type { Metadata } from "next";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "الفريق",
-  description: "تدرب مع محترفين عالميين مكرسين للارتقاء بمستواك في نادي جميرا للاسكواش.",
+  title: "فريق التدريب",
+  description:
+    "تدرب مع محترفين عالميين مكرسين للارتقاء بمستواك في نادي جميرا للاسكواش دبي. خبرات استراتيجية، فنية وبدنية للأبطال.",
+  alternates: {
+    canonical: "/coaches",
+  },
+  keywords: [
+    "مدربي اسكواش دبي",
+    "تدريب اسكواش محترف",
+    "ماركوس ثورن اسكواش",
+    "إيلينا روستوفا اسكواش",
+    "ديفيد تشين لياقة اسكواش",
+  ],
+  openGraph: {
+    title: "فريق التدريب | نادي جميرا للاسكواش",
+    description:
+      "تدرب مع محترفين عالميين مكرسين للارتقاء بمستواك في نادي جميرا للاسكواش دبي.",
+    url: "https://jumeira-squash.com/coaches",
+  },
 };
 
 const coaches = [

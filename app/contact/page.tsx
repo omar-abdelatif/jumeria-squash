@@ -3,7 +3,23 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
   title: "اتصل بنا",
-  description: "تواصل مع نادي جميرا للاسكواش. حجز ملاعب، استفسارات العضوية، والمزيد.",
+  description:
+    "تواصل مع نادي جميرا للاسكواش في دبي. حجز ملاعب، استفسارات العضوية، التدريب الخاص، والمزيد.",
+  alternates: {
+    canonical: "/contact",
+  },
+  keywords: [
+    "اتصل بنادي جميرا للاسكواش",
+    "حجز ملعب اسكواش دبي",
+    "عضوية نادي جميرا للاسكواش",
+    "عنوان نادي جميرا للاسكواش",
+  ],
+  openGraph: {
+    title: "اتصل بنا | نادي جميرا للاسكواش",
+    description:
+      "تواصل مع نادي جميرا للاسكواش في دبي. حجز ملاعب، استفسارات العضوية، التدريب الخاص، والمزيد.",
+    url: "https://jumeira-squash.com/contact",
+  },
 };
 
 export default function ContactPage() {

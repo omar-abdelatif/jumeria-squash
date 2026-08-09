@@ -17,8 +17,8 @@ export default function NewsPage() {
     <>
       {/* Page Header */}
       <AnimatedSection>
-        <div className="mb-16 max-w-3xl">
-          <h1 className="font-display-lg text-on-surface mb-6">آخر الأخبار</h1>
+        <div className="mb-10 sm:mb-16 max-w-3xl">
+          <h1 className="font-display-lg text-on-surface mb-4 sm:mb-6">آخر الأخبار</h1>
           <p className="font-body-lg text-on-surface-variant">
             ابق على اطلاع بنتائج البطولات، وإعلانات النادي، ورؤى الأداء من مجتمع
             نادي جميرا للاسكواش.
@@ -28,16 +28,16 @@ export default function NewsPage() {
 
       {/* Featured Article */}
       <AnimatedSection delay={0.1}>
-        <div className="glass-card rounded-xl overflow-hidden mb-16 hover-lift group">
+        <div className="glass-card rounded-xl overflow-hidden mb-12 sm:mb-16 hover-lift group">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-            <div className="h-[300px] md:h-[450px] w-full overflow-hidden">
+            <div className="h-[240px] sm:h-[300px] md:h-[450px] w-full overflow-hidden">
               <img
                 alt={featuredArticle.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 src={featuredArticle.image}
               />
             </div>
-            <div className="p-8 md:p-12 flex flex-col justify-center">
+            <div className="p-6 sm:p-8 md:p-12 flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-3">
                 <span className="bg-surface-container-highest px-3 py-1 rounded text-secondary font-label-caps border border-outline-variant">
                   {featuredArticle.category}
@@ -46,7 +46,7 @@ export default function NewsPage() {
                   {featuredArticle.date}
                 </span>
               </div>
-              <h2 className="font-headline-lg text-on-surface mb-6 group-hover:text-secondary transition-colors">
+              <h2 className="font-headline-lg text-on-surface mb-4 sm:mb-6 group-hover:text-secondary transition-colors">
                 {featuredArticle.title}
               </h2>
               <p className="font-body-md text-on-surface-variant mb-6 line-clamp-3">
@@ -54,7 +54,7 @@ export default function NewsPage() {
               </p>
               <Link
                 href={`/news/${featuredArticle.slug}`}
-                className="text-secondary font-semibold flex items-center gap-2 hover:opacity-80 transition-opacity mt-auto"
+                className="text-secondary font-semibold flex items-center gap-2 hover:opacity-80 transition-opacity mt-auto font-body-md text-sm sm:text-base"
               >
                 اقرأ المقال كاملاً{" "}
                 <span className="material-symbols-outlined text-sm">

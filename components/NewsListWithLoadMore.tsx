@@ -49,7 +49,7 @@ export default function NewsListWithLoadMore({
                     src={article.image}
                   />
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-5 sm:p-6 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-secondary font-label-caps">
                       {article.category}
@@ -66,7 +66,7 @@ export default function NewsListWithLoadMore({
                   </p>
                   <Link
                     href={`/news/${article.slug}`}
-                    className="text-secondary font-semibold flex items-center gap-2 hover:opacity-80 transition-opacity mt-auto"
+                    className="text-secondary font-semibold flex items-center gap-2 hover:opacity-80 transition-opacity mt-auto font-body-md text-xs sm:text-sm"
                   >
                     اقرأ المزيد
                     <span className="material-symbols-outlined text-sm">
@@ -81,29 +81,29 @@ export default function NewsListWithLoadMore({
       </div>
 
       {/* Load More Button */}
-      <div className="flex flex-col items-center justify-center mt-16 gap-2">
+      <div className="flex flex-col items-center justify-center mt-12 sm:mt-16 gap-2">
         {hasMore ? (
           <button
             onClick={handleLoadMore}
             disabled={isLoading}
-            className="bg-transparent border border-outline-variant text-on-surface px-8 py-3.5 rounded hover:border-secondary hover:text-secondary transition-all active:scale-95 cursor-pointer font-medium flex items-center gap-3 gold-glow disabled:opacity-50"
+            className="bg-transparent border border-outline-variant text-on-surface px-6 sm:px-8 py-3 sm:py-3.5 rounded hover:border-secondary hover:text-secondary transition-all active:scale-95 cursor-pointer font-medium flex items-center gap-3 gold-glow disabled:opacity-50 text-xs sm:text-sm font-label-caps"
           >
             {isLoading ? (
               <>
-                <span className="w-5 h-5 border-2 border-secondary border-t-transparent rounded-full animate-spin" />
+                <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-secondary border-t-transparent rounded-full animate-spin" />
                 جاري تحميل المقالات...
               </>
             ) : (
               <>
                 تحميل المزيد من المقالات
-                <span className="material-symbols-outlined text-lg">
+                <span className="material-symbols-outlined text-base sm:text-lg">
                   expand_more
                 </span>
               </>
             )}
           </button>
         ) : (
-          <div className="text-on-surface-variant text-sm border border-outline-variant/40 bg-surface-container-low px-6 py-2.5 rounded-full font-label-caps">
+          <div className="text-on-surface-variant text-xs sm:text-sm border border-outline-variant/40 bg-surface-container-low px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-label-caps">
             تم عرض جميع المقالات المتاحة ({allArticles.length})
           </div>
         )}

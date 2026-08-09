@@ -17,7 +17,7 @@ export default function HomePage() {
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
           </div>
-          <div className="relative z-10 px-8 md:px-16 max-w-3xl py-20">
+          <div className="relative z-10 px-5 sm:px-10 md:px-16 max-w-3xl py-12 sm:py-16 md:py-20">
             <h1 className="font-display-lg text-on-background mb-6 leading-tight">
               أداء استثنائي. هيبة لا مثيل لها.
             </h1>
@@ -26,10 +26,10 @@ export default function HomePage() {
               حصري مكرس لإتقان اللعبة.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-secondary text-on-secondary px-8 py-3.5 rounded font-label-caps hover:bg-secondary-fixed transition-all gold-glow active:scale-95 font-bold">
+              <button className="bg-secondary text-on-secondary px-6 sm:px-8 py-3 sm:py-3.5 rounded font-label-caps hover:bg-secondary-fixed transition-all gold-glow active:scale-95 font-bold text-xs sm:text-sm">
                 انضم للنادي
               </button>
-              <button className="bg-transparent border border-outline-variant text-on-surface px-8 py-3.5 rounded font-label-caps hover:border-secondary hover:text-secondary transition-all active:scale-95">
+              <button className="bg-transparent border border-outline-variant text-on-surface px-6 sm:px-8 py-3 sm:py-3.5 rounded font-label-caps hover:border-secondary hover:text-secondary transition-all active:scale-95 text-xs sm:text-sm">
                 استكشف
               </button>
             </div>
@@ -39,11 +39,11 @@ export default function HomePage() {
 
       {/* Stats Glass Panel */}
       <AnimatedSection delay={0.1}>
-        <section className="mb-16 glass-panel rounded-xl p-8 hover:border-outline-variant transition-all">
+        <section className="mb-16 glass-panel rounded-xl p-5 sm:p-8 hover:border-outline-variant transition-all">
           <h3 className="font-label-caps text-secondary mb-6 tracking-widest">
             إحصائيات المنشأة
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {[
               { value: "6", label: "ملاعب بطولة" },
               { value: "200+", label: "لاعبين نشطين" },
@@ -54,7 +54,7 @@ export default function HomePage() {
                 <span className="block font-display-lg text-secondary mb-2 transition-transform duration-300 group-hover:scale-110">
                   {stat.value}
                 </span>
-                <span className="text-on-surface-variant text-sm">
+                <span className="font-body-md text-on-surface-variant text-xs sm:text-sm">
                   {stat.label}
                 </span>
               </div>
@@ -73,11 +73,11 @@ export default function HomePage() {
             </span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-surface-container-low border border-outline-variant rounded-xl p-8 hover:border-outline transition-all duration-300 hover:shadow-xl">
+            <div className="bg-surface-container-low border border-outline-variant rounded-xl p-6 sm:p-8 hover:border-outline transition-all duration-300 hover:shadow-xl">
               <h3 className="font-headline-md text-on-surface mb-4">
                 مصمم بدقة للرياضي المعاصر
               </h3>
-              <p className="text-on-surface-variant leading-relaxed mb-6">
+              <p className="font-body-md text-on-surface-variant leading-relaxed mb-6">
                 في نادي جميرا للاسكواش، ندمج أحدث التكنولوجيا الرياضية مع الجو
                 الراقي لنادي الأعضاء الفاخر. كل تفصيل، من الميكانيكا الحيوية
                 لأرضيات ملاعبنا إلى البيئة التي يتم التحكم في مناخها، مصمم بدقة
@@ -127,11 +127,11 @@ export default function HomePage() {
             ].map((amenity) => (
               <div
                 key={amenity.title}
-                className="bg-surface-container-low border border-outline-variant rounded-xl p-8 hover:border-outline transition-all duration-300 gold-glow hover:-translate-y-1 group"
+                className="bg-surface-container-low border border-outline-variant rounded-xl p-6 sm:p-8 hover:border-outline transition-all duration-300 gold-glow hover:-translate-y-1 group"
               >
-                <div className="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center border border-outline-variant mb-6 group-hover:border-secondary transition-colors">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-container flex items-center justify-center border border-outline-variant mb-6 group-hover:border-secondary transition-colors">
                   <span
-                    className="material-symbols-outlined text-secondary text-2xl"
+                    className="material-symbols-outlined text-secondary text-xl sm:text-2xl"
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >
                     {amenity.icon}
@@ -140,7 +140,7 @@ export default function HomePage() {
                 <h3 className="font-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors">
                   {amenity.title}
                 </h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed">
+                <p className="font-body-md text-on-surface-variant leading-relaxed">
                   {amenity.description}
                 </p>
               </div>

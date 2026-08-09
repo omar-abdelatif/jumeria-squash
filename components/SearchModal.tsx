@@ -104,8 +104,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             className="relative z-10 w-full max-w-2xl bg-surface-container-low border border-outline-variant rounded-2xl shadow-2xl overflow-hidden glass-panel"
           >
             {/* Search Input Bar */}
-            <div className="p-4 border-b border-outline-variant flex items-center gap-3">
-              <span className="material-symbols-outlined text-secondary text-2xl">
+            <div className="p-3.5 sm:p-4 border-b border-outline-variant flex items-center gap-3">
+              <span className="material-symbols-outlined text-secondary text-xl sm:text-2xl">
                 search
               </span>
               <input
@@ -114,7 +114,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="ابحث عن ملاعب، مدربين، أخبار، أو خدمات..."
-                className="w-full bg-transparent text-on-surface text-lg focus:outline-none placeholder:text-on-surface-variant/60"
+                className="w-full bg-transparent text-on-surface text-sm sm:text-base md:text-lg focus:outline-none placeholder:text-on-surface-variant/60 font-body-md"
               />
               {query && (
                 <button

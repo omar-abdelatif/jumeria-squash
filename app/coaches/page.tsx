@@ -41,7 +41,7 @@ export default function CoachesPage() {
     <>
       {/* Page Header */}
       <AnimatedSection>
-        <header className="text-center w-full max-w-4xl mx-auto mb-16">
+        <header className="text-center w-full max-w-4xl mx-auto mb-10 sm:mb-16">
           <h1 className="font-display-lg text-on-background mb-3">
             طاقم تدريب النخبة
           </h1>
@@ -58,7 +58,7 @@ export default function CoachesPage() {
           <AnimatedSection key={coach.name} delay={0.1 * (index + 1)}>
             <article className="glass-panel rounded-xl overflow-hidden gold-glow transition-all duration-300 flex flex-col group cursor-pointer hover:-translate-y-2">
               {/* Coach Image */}
-              <div className="h-64 w-full relative overflow-hidden">
+              <div className="h-56 sm:h-64 w-full relative overflow-hidden">
                 <img
                   alt={`صورة ${coach.name}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -72,11 +72,11 @@ export default function CoachesPage() {
               </div>
 
               {/* Coach Info */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-5 sm:p-6 flex flex-col flex-grow">
                 <h2 className="font-headline-md text-on-background mb-2 group-hover:text-secondary transition-colors">
                   {coach.name}
                 </h2>
-                <p className="text-on-surface-variant mb-6 flex-grow leading-relaxed">
+                <p className="font-body-md text-on-surface-variant mb-6 flex-grow leading-relaxed">
                   {coach.bio}
                 </p>
                 <div className="grid grid-cols-2 gap-2 pt-4 border-t border-outline-variant">
@@ -84,13 +84,13 @@ export default function CoachesPage() {
                     <span className="block text-on-surface-variant font-label-caps mb-1">
                       التخصص
                     </span>
-                    <span className="text-on-background">{coach.specialty}</span>
+                    <span className="text-on-background font-body-md text-xs sm:text-sm">{coach.specialty}</span>
                   </div>
                   <div>
                     <span className="block text-on-surface-variant font-label-caps mb-1">
                       الخبرة
                     </span>
-                    <span className="text-secondary font-bold">
+                    <span className="text-secondary font-bold font-body-md text-xs sm:text-sm">
                       {coach.experience}
                     </span>
                   </div>

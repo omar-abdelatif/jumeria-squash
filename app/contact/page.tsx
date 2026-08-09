@@ -11,7 +11,7 @@ export default function ContactPage() {
     <>
       {/* Header Section */}
       <AnimatedSection>
-        <div className="mb-16 text-center max-w-3xl mx-auto">
+        <div className="mb-10 sm:mb-16 text-center max-w-3xl mx-auto">
           <h1 className="font-display-lg text-on-surface mb-3">ابق على تواصل</h1>
           <p className="font-body-lg text-on-surface-variant">
             سواء كنت تبحث عن حجز ملعب، أو الاستفسار عن العضوية، أو مجرد إلقاء
@@ -25,12 +25,12 @@ export default function ContactPage() {
         {/* Contact Form */}
         <div className="lg:col-span-7">
           <AnimatedSection delay={0.1}>
-            <div className="glass-panel rounded-xl p-8 h-full">
+            <div className="glass-panel rounded-xl p-5 sm:p-8 h-full">
               <div className="mb-8 border-b border-outline-variant pb-4">
                 <h2 className="font-headline-md text-on-surface mb-1">
                   إرسال رسالة
                 </h2>
-                <p className="text-on-surface-variant text-sm">
+                <p className="font-body-md text-on-surface-variant text-xs sm:text-sm">
                   نحن نهدف للرد على جميع الاستفسارات في غضون 24 ساعة.
                 </p>
               </div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                       الاسم الأول
                     </label>
                     <input
-                      className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors text-right"
+                      className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors text-right font-body-md text-sm"
                       id="first_name"
                       placeholder="أحمد"
                       type="text"
@@ -60,7 +60,7 @@ export default function ContactPage() {
                       اسم العائلة
                     </label>
                     <input
-                      className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors text-right"
+                      className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors text-right font-body-md text-sm"
                       id="last_name"
                       placeholder="محمد"
                       type="text"
@@ -76,7 +76,7 @@ export default function ContactPage() {
                     عنوان البريد الإلكتروني
                   </label>
                   <input
-                    className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors text-left dir-ltr"
+                    className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors text-left dir-ltr font-body-md text-sm"
                     id="email"
                     placeholder="ahmed.mohamed@example.com"
                     style={{ direction: "ltr" }}
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   </label>
                   <div className="relative">
                     <select
-                      className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface appearance-none focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors cursor-pointer"
+                      className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface appearance-none focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors cursor-pointer font-body-md text-sm"
                       id="inquiry_type"
                     >
                       <option>معلومات العضوية</option>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                     رسالتك
                   </label>
                   <textarea
-                    className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors resize-none text-right"
+                    className="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors resize-none text-right font-body-md text-sm"
                     id="message"
                     placeholder="كيف يمكننا مساعدتك؟"
                     rows={5}
@@ -127,7 +127,7 @@ export default function ContactPage() {
                 {/* Submit */}
                 <div className="pt-4">
                   <button
-                    className="w-full md:w-auto bg-secondary text-on-secondary px-8 py-3.5 rounded font-label-caps hover:bg-secondary-fixed transition-all glow-hover flex items-center justify-center gap-2 font-bold active:scale-95 cursor-pointer"
+                    className="w-full md:w-auto bg-secondary text-on-secondary px-8 py-3.5 rounded font-label-caps hover:bg-secondary-fixed transition-all glow-hover flex items-center justify-center gap-2 font-bold active:scale-95 cursor-pointer text-xs sm:text-sm"
                     type="submit"
                   >
                     إرسال الرسالة{" "}
@@ -145,19 +145,19 @@ export default function ContactPage() {
         <div className="lg:col-span-5 flex flex-col gap-6">
           {/* Direct Contact */}
           <AnimatedSection delay={0.2}>
-            <div className="glass-panel rounded-xl p-8 flex flex-col gap-6 relative overflow-hidden group">
+            <div className="glass-panel rounded-xl p-5 sm:p-8 flex flex-col gap-6 relative overflow-hidden group">
               <div className="absolute -left-10 -top-10 w-40 h-40 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/10 transition-colors duration-500"></div>
               <h2 className="font-label-caps text-secondary mb-2">خطوط مباشرة</h2>
               <div className="flex items-start gap-4">
                 <div className="bg-surface-container-high p-3 rounded-lg text-secondary">
-                  <span className="material-symbols-outlined">call</span>
+                  <span className="material-symbols-outlined text-lg sm:text-xl">call</span>
                 </div>
                 <div>
-                  <p className="text-on-surface-variant text-sm mb-1">
+                  <p className="font-body-md text-on-surface-variant text-xs sm:text-sm mb-1">
                     الاستقبال والحجوزات
                   </p>
                   <p
-                    className="font-headline-md text-on-surface"
+                    className="font-headline-md text-base sm:text-lg text-on-surface"
                     style={{ direction: "ltr", textAlign: "right" }}
                   >
                     +971 4 123 4567
@@ -166,13 +166,13 @@ export default function ContactPage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="bg-surface-container-high p-3 rounded-lg text-secondary">
-                  <span className="material-symbols-outlined">mail</span>
+                  <span className="material-symbols-outlined text-lg sm:text-xl">mail</span>
                 </div>
                 <div>
-                  <p className="text-on-surface-variant text-sm mb-1">
+                  <p className="font-body-md text-on-surface-variant text-xs sm:text-sm mb-1">
                     استفسارات عامة
                   </p>
-                  <p className="font-body-lg text-on-surface">
+                  <p className="font-body-lg text-sm sm:text-base text-on-surface break-all">
                     concierge@jumeirasquash.com
                   </p>
                 </div>

@@ -46,7 +46,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative z-10 w-full max-w-md bg-surface-container-low border border-outline-variant rounded-2xl p-8 shadow-2xl overflow-hidden glass-panel"
+            className="relative z-10 w-full max-w-md bg-surface-container-low border border-outline-variant rounded-2xl p-5 sm:p-8 shadow-2xl overflow-hidden glass-panel"
           >
             {/* Background Glow */}
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
@@ -56,7 +56,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             <div className="flex justify-between items-center mb-6">
               <div>
                 <h2 className="font-headline-md text-on-surface">تسجيل الدخول</h2>
-                <p className="text-on-surface-variant text-sm mt-1">
+                <p className="font-body-md text-on-surface-variant text-xs sm:text-sm mt-1">
                   أهلاً بك مجدداً في نادي جميرا للاسكواش
                 </p>
               </div>

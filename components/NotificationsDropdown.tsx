@@ -70,12 +70,12 @@ export default function NotificationsDropdown({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute left-4 top-16 md:left-24 z-50 w-80 sm:w-96 bg-surface-container-low border border-outline-variant rounded-2xl shadow-2xl overflow-hidden glass-panel"
+            className="absolute left-4 top-16 md:left-24 z-50 w-[calc(100vw-2rem)] max-w-sm sm:w-96 bg-surface-container-low border border-outline-variant rounded-2xl shadow-2xl overflow-hidden glass-panel"
           >
             {/* Header */}
-            <div className="p-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-high/40">
+            <div className="p-3.5 sm:p-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-high/40">
               <div className="flex items-center gap-2">
-                <span className="font-headline-md text-base text-on-surface">
+                <span className="font-headline-md text-sm sm:text-base text-on-surface">
                   الإشعارات
                 </span>
                 {notifications.some((n) => n.unread) && (
@@ -86,7 +86,7 @@ export default function NotificationsDropdown({
               </div>
               <button
                 onClick={markAllAsRead}
-                className="text-xs text-secondary hover:underline cursor-pointer"
+                className="text-xs text-secondary hover:underline cursor-pointer font-body-md"
               >
                 تحديد الكل كمقروء
               </button>
@@ -99,25 +99,25 @@ export default function NotificationsDropdown({
                   key={n.id}
                   href={n.href}
                   onClick={onClose}
-                  className={`flex items-start gap-3 p-4 hover:bg-surface-container-high transition-colors ${
+                  className={`flex items-start gap-3 p-3.5 sm:p-4 hover:bg-surface-container-high transition-colors ${
                     n.unread ? "bg-surface-container/60" : ""
                   }`}
                 >
                   <div
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border ${
+                    className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center shrink-0 border ${
                       n.unread
                         ? "bg-secondary/15 text-secondary border-secondary/40"
                         : "bg-surface-container-high text-on-surface-variant border-outline-variant"
                     }`}
                   >
-                    <span className="material-symbols-outlined text-lg">
+                    <span className="material-symbols-outlined text-base sm:text-lg">
                       {n.icon}
                     </span>
                   </div>
 
                   <div className="flex-grow">
                     <p
-                      className={`text-sm leading-snug ${
+                      className={`text-xs sm:text-sm leading-snug font-body-md ${
                         n.unread
                           ? "text-on-surface font-semibold"
                           : "text-on-surface-variant"
@@ -125,7 +125,7 @@ export default function NotificationsDropdown({
                     >
                       {n.title}
                     </p>
-                    <span className="text-xs text-on-surface-variant/70 mt-1 block">
+                    <span className="text-[11px] sm:text-xs text-on-surface-variant/70 mt-1 block">
                       {n.time}
                     </span>
                   </div>

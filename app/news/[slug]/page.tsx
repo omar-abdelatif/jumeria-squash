@@ -96,7 +96,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
       {/* Hero Image */}
       <AnimatedSection delay={0.2}>
-        <div className="relative rounded-2xl overflow-hidden mb-12 h-[350px] md:h-[480px] border border-outline-variant shadow-2xl">
+        <div className="relative rounded-2xl overflow-hidden mb-8 sm:mb-12 h-[240px] sm:h-[350px] md:h-[480px] border border-outline-variant shadow-2xl">
           <img
             src={article.image}
             alt={article.title}
@@ -110,30 +110,30 @@ export default async function NewsDetailPage({ params }: PageProps) {
       <AnimatedSection delay={0.3}>
         <div className="space-y-8 text-on-surface-variant font-body-lg leading-relaxed">
           {/* Introduction */}
-          <p className="text-xl text-on-surface font-medium border-r-4 border-secondary pr-4 leading-relaxed bg-surface-container-low/50 p-4 rounded-l-xl">
+          <p className="font-body-lg text-on-surface font-medium border-r-4 border-secondary pr-4 leading-relaxed bg-surface-container-low/50 p-4 sm:p-5 rounded-l-xl">
             {article.content.introduction}
           </p>
 
           {/* Sections */}
           {article.content.sections.map((sec, idx) => (
             <div key={idx} className="space-y-3">
-              <h2 className="font-headline-lg text-2xl text-on-surface pt-4">
+              <h2 className="font-headline-lg text-on-surface pt-4">
                 {sec.heading}
               </h2>
-              <p className="text-on-surface-variant">{sec.body}</p>
+              <p className="font-body-lg text-on-surface-variant">{sec.body}</p>
             </div>
           ))}
 
           {/* Quote Block */}
           {article.content.quote && (
-            <div className="my-10 glass-panel rounded-2xl p-8 border-r-4 border-secondary relative overflow-hidden">
-              <span className="material-symbols-outlined text-secondary/20 text-6xl absolute top-4 left-4">
+            <div className="my-8 sm:my-10 glass-panel rounded-2xl p-5 sm:p-8 border-r-4 border-secondary relative overflow-hidden">
+              <span className="material-symbols-outlined text-secondary/20 text-4xl sm:text-6xl absolute top-4 left-4">
                 format_quote
               </span>
-              <p className="text-xl text-on-surface font-headline-md italic mb-4 relative z-10">
+              <p className="font-headline-md text-on-surface italic mb-4 relative z-10">
                 &ldquo;{article.content.quote.text}&rdquo;
               </p>
-              <span className="text-secondary font-label-caps text-sm block font-semibold">
+              <span className="text-secondary font-label-caps text-xs sm:text-sm block font-semibold">
                 — {article.content.quote.author}
               </span>
             </div>
@@ -141,17 +141,17 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
           {/* Highlights List */}
           {article.content.highlights && (
-            <div className="bg-surface-container-low border border-outline-variant rounded-2xl p-6 my-8">
-              <h3 className="font-headline-md text-lg text-on-surface mb-4 flex items-center gap-2">
-                <span className="material-symbols-outlined text-secondary">
+            <div className="bg-surface-container-low border border-outline-variant rounded-2xl p-5 sm:p-6 my-8">
+              <h3 className="font-headline-md text-on-surface mb-4 flex items-center gap-2">
+                <span className="material-symbols-outlined text-secondary text-lg sm:text-xl">
                   stars
                 </span>
                 أبرز نقاط المقال
               </h3>
-              <ul className="space-y-3 text-base">
+              <ul className="space-y-3 font-body-md text-xs sm:text-sm md:text-base">
                 {article.content.highlights.map((highlight, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-secondary text-lg mt-0.5">
+                    <span className="material-symbols-outlined text-secondary text-base sm:text-lg mt-0.5">
                       check_circle
                     </span>
                     <span>{highlight}</span>

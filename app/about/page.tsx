@@ -22,7 +22,7 @@ export default function AboutPage() {
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
           </div>
-          <div className="relative z-10 px-8 md:px-16 max-w-3xl py-20">
+          <div className="relative z-10 px-5 sm:px-10 md:px-16 max-w-3xl py-12 sm:py-16 md:py-20">
             <h1 className="font-display-lg text-on-background mb-6">
               الارتقاء باللعبة.
             </h1>
@@ -31,7 +31,7 @@ export default function AboutPage() {
               والهواة المتحمسين على حد سواء. نحن نمزج بين مرافق عالمية المستوى
               وجو حصري راقٍ.
             </p>
-            <button className="bg-secondary text-on-secondary px-8 py-3.5 rounded font-label-caps hover:bg-secondary-fixed transition-all gold-glow active:scale-95 font-bold">
+            <button className="bg-secondary text-on-secondary px-6 sm:px-8 py-3 sm:py-3.5 rounded font-label-caps hover:bg-secondary-fixed transition-all gold-glow active:scale-95 font-bold text-xs sm:text-sm">
               انضم للنادي
             </button>
           </div>
@@ -41,11 +41,11 @@ export default function AboutPage() {
       {/* Vision & Mission (Bento Style) */}
       <AnimatedSection delay={0.1}>
         <section className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-surface-container-low border border-outline-variant rounded-xl p-8 hover:border-outline transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-surface-container-low border border-outline-variant rounded-xl p-6 sm:p-8 hover:border-outline transition-all duration-300 hover:-translate-y-1">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center border border-outline-variant">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-container flex items-center justify-center border border-outline-variant">
                 <span
-                  className="material-symbols-outlined text-secondary"
+                  className="material-symbols-outlined text-secondary text-xl sm:text-2xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   flag
@@ -53,18 +53,18 @@ export default function AboutPage() {
               </div>
               <h2 className="font-headline-md text-on-surface">مهمتنا</h2>
             </div>
-            <p className="text-on-surface-variant leading-relaxed">
+            <p className="font-body-md text-on-surface-variant leading-relaxed">
               توفير مرافق لا مثيل لها وتدريب على مستوى عالمي وأجواء مجتمعية
               نابضة بالحياة. نحن ملتزمون برعاية المواهب على جميع المستويات، وتعزيز
               رياضة الاسكواش، وضمان تجربة كل عضو لأعلى مستوى من الخدمة والتطوير
               الرياضي.
             </p>
           </div>
-          <div className="bg-surface-container-low border border-outline-variant rounded-xl p-8 hover:border-outline transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-surface-container-low border border-outline-variant rounded-xl p-6 sm:p-8 hover:border-outline transition-all duration-300 hover:-translate-y-1">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center border border-outline-variant">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-container flex items-center justify-center border border-outline-variant">
                 <span
-                  className="material-symbols-outlined text-secondary"
+                  className="material-symbols-outlined text-secondary text-xl sm:text-2xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   visibility
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
               <h2 className="font-headline-md text-on-surface">رؤيتنا</h2>
             </div>
-            <p className="text-on-surface-variant leading-relaxed">
+            <p className="font-body-md text-on-surface-variant leading-relaxed">
               أن نكون الوجهة الأولى لتميز الاسكواش، وتعزيز مجتمع يلتقي فيه الشغف
               بالأداء. نحن نسعى جاهدين لوضع المعيار العالمي للأندية الرياضية
               الفاخرة، وخلق بيئة تلهم الإنجاز البدني والتواصل الاجتماعي.
@@ -105,7 +105,7 @@ export default function AboutPage() {
                   }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20"></div>
-                <div className="relative z-10 p-6 h-full flex flex-col justify-end">
+                <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-end">
                   <div className="w-10 h-10 rounded-full bg-background border border-outline-variant flex items-center justify-center mb-4">
                     <span className="material-symbols-outlined text-tertiary">
                       fitness_center
@@ -114,7 +114,7 @@ export default function AboutPage() {
                   <h3 className="font-headline-md text-on-surface mb-2">
                     صالة الأداء
                   </h3>
-                  <p className="text-on-surface-variant text-sm">
+                  <p className="font-body-md text-on-surface-variant text-xs sm:text-sm">
                     منطقة تدريب وظيفي واستشفاء مجهزة بالكامل ومصممة خصيصًا لتكييف
                     الاسكواش.
                   </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20"></div>
-                <div className="relative z-10 p-6 h-full flex flex-col justify-end">
+                <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-end">
                   <div className="w-10 h-10 rounded-full bg-background border border-outline-variant flex items-center justify-center mb-4">
                     <span className="material-symbols-outlined text-tertiary">
                       local_cafe
@@ -139,7 +139,7 @@ export default function AboutPage() {
                   <h3 className="font-headline-md text-on-surface mb-2">
                     صالة الأعضاء
                   </h3>
-                  <p className="text-on-surface-variant text-sm">
+                  <p className="font-body-md text-on-surface-variant text-xs sm:text-sm">
                     مساحة راقية للاستشفاء بعد المباراة والتواصل وخدمات الضيافة
                     المتميزة.
                   </p>
@@ -167,8 +167,8 @@ export default function AboutPage() {
                   </h3>
                 </div>
               </div>
-              <div className="p-6">
-                <p className="text-on-surface-variant">
+              <div className="p-5 sm:p-6">
+                <p className="font-body-md text-on-surface-variant">
                   تتميز منشأتنا بستة ملاعب ASB System100، بما في ذلك ملعبين عرض
                   للبطولات زجاجيين بالكامل. صُممت هذه الملاعب لامتصاص الصدمات
                   بشكل مثالي وارتداد مثالي للكرة، وتلبي مواصفات WSF للعب البطولات

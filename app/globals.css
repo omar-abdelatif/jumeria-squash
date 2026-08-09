@@ -73,24 +73,31 @@
   --font-heading: 'Cairo', sans-serif;
   --font-body: 'Cairo', sans-serif;
 
-  /* ── Font Size ── */
-  --font-size-body-md: 16px;
+  /* ── Responsive Fluid Font Size Tokens ── */
+  --font-size-body-md: clamp(0.875rem, 0.35vw + 0.8rem, 1.05rem);
   --font-size-body-md--line-height: 1.6;
-  --font-size-body-lg: 18px;
+  --font-size-body-lg: clamp(1rem, 0.5vw + 0.875rem, 1.25rem);
   --font-size-body-lg--line-height: 1.6;
-  --font-size-label-caps: 12px;
-  --font-size-label-caps--line-height: 1.0;
-  --font-size-headline-md: 24px;
+  --font-size-label-caps: clamp(0.6875rem, 0.25vw + 0.625rem, 0.8125rem);
+  --font-size-label-caps--line-height: 1.2;
+  --font-size-headline-md: clamp(1.125rem, 1vw + 0.9rem, 1.625rem);
   --font-size-headline-md--line-height: 1.3;
-  --font-size-headline-lg: 32px;
+  --font-size-headline-lg: clamp(1.35rem, 1.5vw + 1rem, 2.25rem);
   --font-size-headline-lg--line-height: 1.2;
-  --font-size-display-lg: 48px;
-  --font-size-display-lg--line-height: 1.1;
+  --font-size-display-lg: clamp(1.75rem, 2.5vw + 1.2rem, 3.25rem);
+  --font-size-display-lg--line-height: 1.15;
 }
 
-/* ── Base Styles ── */
+/* ── Base Styles & Responsive Scaling ── */
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 93.75%; /* 15px base root scaling on small mobile devices */
+  }
 }
 
 body {
@@ -111,7 +118,7 @@ body {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: clamp(1.125rem, 1vw + 0.875rem, 1.5rem);
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -167,49 +174,49 @@ body {
   box-shadow: 0 0 15px rgba(233, 195, 73, 0.4);
 }
 
-/* ── Typography Utilities ── */
+/* ── Fluid Typography Utilities ── */
 .font-display-lg {
   font-family: var(--font-heading);
-  font-size: 48px;
-  line-height: 1.1;
-  letter-spacing: 0.05em;
+  font-size: clamp(1.75rem, 2.5vw + 1.2rem, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
   font-weight: 700;
 }
 
 .font-headline-lg {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: clamp(1.35rem, 1.5vw + 1rem, 2.25rem);
   line-height: 1.2;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   font-weight: 600;
 }
 
 .font-headline-md {
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: clamp(1.125rem, 1vw + 0.9rem, 1.625rem);
   line-height: 1.3;
   font-weight: 600;
 }
 
 .font-body-lg {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: clamp(1rem, 0.5vw + 0.875rem, 1.25rem);
   line-height: 1.6;
   font-weight: 400;
 }
 
 .font-body-md {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: clamp(0.875rem, 0.35vw + 0.8rem, 1.05rem);
   line-height: 1.6;
   font-weight: 400;
 }
 
 .font-label-caps {
   font-family: var(--font-body);
-  font-size: 12px;
-  line-height: 1.0;
-  letter-spacing: 0.1em;
+  font-size: clamp(0.6875rem, 0.25vw + 0.625rem, 0.8125rem);
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   font-weight: 600;
   text-transform: uppercase;
 }

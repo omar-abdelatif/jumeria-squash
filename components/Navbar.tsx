@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import LoginModal from "./LoginModal";
@@ -46,12 +47,22 @@ export default function Navbar() {
       >
         <div className="flex justify-between items-center px-4 sm:px-6 lg:px-8 h-full w-full max-w-7xl mx-auto relative">
           {/* Brand */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="text-base sm:text-lg md:text-xl font-bold text-secondary tracking-tight hover:opacity-90 transition-opacity whitespace-nowrap"
+              className="flex items-center gap-2.5 group cursor-pointer"
             >
-              نادي جميرا للاسكواش
+              <Image
+                src="/logo.png"
+                alt="نادي جميرا للاسكواش"
+                width={40}
+                height={40}
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-secondary/50 shadow-md group-hover:scale-105 transition-transform"
+                priority
+              />
+              <span className="text-base sm:text-lg md:text-xl font-bold text-secondary tracking-tight group-hover:opacity-90 transition-opacity whitespace-nowrap">
+                نادي جميرا للاسكواش
+              </span>
             </Link>
           </div>
 

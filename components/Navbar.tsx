@@ -24,6 +24,7 @@ export default function Navbar() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(2);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,7 +84,7 @@ export default function Navbar() {
                 setIsSearchOpen(true);
               }}
               aria-label="Search"
-              className="p-2 text-on-surface-variant hover:text-secondary transition-colors rounded-lg hover:bg-surface-container-high active:scale-95"
+              className="p-2 text-on-surface-variant hover:text-secondary transition-colors rounded-lg hover:bg-surface-container-high active:scale-95 cursor-pointer"
             >
               <span className="material-symbols-outlined text-lg sm:text-xl">search</span>
             </button>
@@ -93,21 +94,25 @@ export default function Navbar() {
               <button
                 onClick={() => {
                   setIsSearchOpen(false);
+                  setMobileOpen(false);
                   setIsNotificationsOpen(!isNotificationsOpen);
                 }}
-                aria-label="Notifications"
-                className="p-2 text-on-surface-variant hover:text-secondary transition-colors rounded-lg hover:bg-surface-container-high relative active:scale-95"
+                aria-label="الإشعارات"
+                className="p-2 text-on-surface-variant hover:text-secondary transition-colors rounded-lg hover:bg-surface-container-high relative active:scale-95 cursor-pointer"
               >
                 <span className="material-symbols-outlined text-lg sm:text-xl">
                   notifications
                 </span>
-                <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-background animate-pulse" />
+                {unreadCount > 0 && (
+                  <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-background animate-pulse" />
+                )}
               </button>
 
               {/* Notifications Dropdown */}
               <NotificationsDropdown
                 isOpen={isNotificationsOpen}
                 onClose={() => setIsNotificationsOpen(false)}
+                onUnreadCountChange={setUnreadCount}
               />
             </div>
 
